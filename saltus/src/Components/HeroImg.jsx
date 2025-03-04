@@ -12,7 +12,7 @@ const HeroImg = () => {
         className="md:mb-20 mb-5 m-auto ml-[10%]"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <img src={grp3} alt="" />
       </motion.div>
@@ -22,7 +22,7 @@ const HeroImg = () => {
         className="ml-[40%]"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
       >
         <img src={grp2} alt="" />
       </motion.div>
@@ -34,7 +34,7 @@ const HeroImg = () => {
           alt=""
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
         />
         <motion.img
           src={grp4}
@@ -42,7 +42,7 @@ const HeroImg = () => {
           className="md:w-[300px] ml-12 md:ml-0"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
         />
       </div>
     </div>
