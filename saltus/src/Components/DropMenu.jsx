@@ -14,7 +14,7 @@ const DropMenu = ({ isOpen, onClose }) => {
 
  
       <div
-        className={`fixed top-0 z-10 left-0 w-full h-full bg-white shadow-lg transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0  b  -0 z-10 left-0 w-full h-[100vh] bg-white shadow-lg transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -39,7 +39,7 @@ const DropMenu = ({ isOpen, onClose }) => {
           </ul>
         </nav>
 
-        <div className="absolute bottom-6 left-0 w-full px-6">
+        <div className="absolute bottom-10 left-0 w-full px-6">
           <button className="w-full py-3 bg-primary text-white font-semibold text-lg rounded-full shadow-md hover:bg-primary-dark transition-all">
             Join Our Waitlist
           </button>

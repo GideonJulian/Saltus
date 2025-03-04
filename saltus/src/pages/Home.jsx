@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../Components/Header";
 import DropMenu from "../Components/DropMenu";
 import Hero from "../Components/Hero";
+import WhyUs from "../Components/WhyUs";
 const Home = () => {
   const [dropMenuState, setDropMenuSTate] = useState(false);
   const handleOpenDropMenu = () => {
@@ -17,6 +18,9 @@ const Home = () => {
       </div>
       <div>
         <Hero />
+      </div>
+      <div>
+        <WhyUs />
       </div>
       <div>{dropMenuState && <DropMenu isOpen={dropMenuState} onClose={closeDropMenu}/>}</div>
     </div>
