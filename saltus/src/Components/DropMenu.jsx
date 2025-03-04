@@ -14,7 +14,7 @@ const DropMenu = ({ isOpen, onClose }) => {
 
  
       <div
-        className={`fixed top-0  b  -0 z-10 left-0 w-full h-[100vh] bg-white shadow-lg transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0  b-0 z-10 left-0 w-full h-[100vh] bg-white shadow-lg transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
