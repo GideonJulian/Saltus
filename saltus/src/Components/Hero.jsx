@@ -3,6 +3,7 @@ import grp1 from '../assets/images/grp1.png'
 import grp2 from '../assets/images/grp2.png'
 import grp3 from '../assets/images/grp3.png'
 import grp4 from '../assets/images/grp4.png'
+import HeroImg from "./HeroImg";
 const Hero = () => {
   return (
     <div className="bg-[#f0eeee] min-h-screen flex md:p-16 px-3 pt-20 md:flex-row flex-col   w-full ">
@@ -30,17 +31,8 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="m-auto mb-10 "> 
-        <div className="md:mb-20 mb-5 m-auto ml-[10%]">
-          <img src={grp3} alt="" />
-        </div>
-        <div className="ml-[40%]">
-          <img src={grp2} alt="" />
-        </div>
-        <div className="flex md:gap-20 items-center md:flex-row flex-col "> 
-          <img src={grp1} alt="" />
-          <img src={grp4} alt="" className="md:w-[300px] ml-12 md:ml-0"/>
-        </div>
+      <div className="mt-"> 
+        <HeroImg />
       </div>
     </div>
   );
