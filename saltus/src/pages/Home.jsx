@@ -26,13 +26,20 @@ const Home = () => {
         <WhyUs />
       </div>
       <div className="w-full bg-[#F9F9F9] p-6 mb-10">
-        
         <div>
           <HowItWorks />
         </div>
-        <div>
-          <Faq />
-        </div>
+      </div>
+      <div>
+        <Faq />
+      </div>
+      <div className="w-full bg-primary p-7 flex items-center flex-col justify-center mb-5 ">
+        <h1 className="text-[40px] font-600] text-ceneter text-white">
+          Get Started On Saltus Today!
+        </h1>
+        <button className="px-4 py-3 bg-white rounded-full text-sm font-[600] text-black mt-5">
+          Join our wailist
+        </button>
       </div>
       <div>
         {dropMenuState && (
