@@ -8,7 +8,7 @@ import fr4 from "../assets/images/fr4.png";
 
 const FeatureGrid = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, threshold: 2 });
+  const isInView = useInView(ref, { once: false, threshold: 1 });
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },

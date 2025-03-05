@@ -1,8 +1,8 @@
 import React from "react";
-import grp1 from '../assets/images/grp1.png'
-import grp2 from '../assets/images/grp2.png'
-import grp3 from '../assets/images/grp3.png'
-import grp4 from '../assets/images/grp4.png'
+import grp1 from "../assets/images/grp1.png";
+import grp2 from "../assets/images/grp2.png";
+import grp3 from "../assets/images/grp3.png";
+import grp4 from "../assets/images/grp4.png";
 import HeroImg from "./HeroImg";
 const Hero = () => {
   return (
@@ -17,21 +17,11 @@ const Hero = () => {
           and investors focused on shared objectives. Show your team why their
           work matters.
         </p>
-        <div className="relative bg-white pl-6 pr-3  md:py-3  py-2 mt-7 rounded-full flex items-center justify-between shadow-lg shadow-[#0D0A2C0F] w-full max-w-[640px] mx-auto">
-          {/* Input Field */}
-          <input
-            type="text"
-            className="w-full md:w-[400px] outline-none text-[16px] placeholder-gray-400"
-            placeholder="Enter your email"
-          />
-
-          {/* Button */}
-          <button className="px-6 md:px-12 py-2  md:py-3 rounded-full bg-primary text-white font-medium text-[16px] whitespace-nowrap">
-            Join Waitlist
-          </button>
-        </div>
+        <button className="px-10 md:px-12 py-2 mt-10 md:py-3 rounded-full bg-primary text-white font-medium text-[16px] whitespace-nowrap">
+          Join Waitlist
+        </button>
       </div>
-      <div className="mt-"> 
+      <div className="mt-">
         <HeroImg />
       </div>
     </div>
