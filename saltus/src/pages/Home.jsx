@@ -3,12 +3,9 @@ import Header from "../Components/Header";
 import DropMenu from "../Components/DropMenu";
 import Hero from "../Components/Hero";
 import WhyUs from "../Components/WhyUs";
-import Number1 from "../assets/icons/Number1.png";
-import Number2 from "../assets/icons/Number2.png";
-import Number3 from "../assets/icons/Number3.png";
-import Number4 from "../assets/icons/Number4.png";
-import Number5 from "../assets/icons/Number5.png";
+
 import HowItWorks from "../Components/HowItWorks";
+import Faq from "../Components/Faq";
 const Home = () => {
   const [dropMenuState, setDropMenuSTate] = useState(false);
   const handleOpenDropMenu = () => {
@@ -32,6 +29,9 @@ const Home = () => {
         
         <div>
           <HowItWorks />
+        </div>
+        <div>
+          <Faq />
         </div>
       </div>
       <div>
