@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="bg-[#f0eeee] min-h-screen flex md:p-16 px-3 pt-20 md:flex-row flex-col   w-full ">
       <div className="md:mt-48 mt-5">
-        <h1 className="font-[700] md:text-5xl text-[35px] text-[#1F3D60] md:w-[650px] w-[360px] leading-snug lmd:eading-normal">
+        <h1 className="font-[700] md:text-5xl text-[29px] text-[#1F3D60] md:w-[650px] w-[360px] leading-snug lmd:eading-normal">
           Stop Operating in Silos, Keep Your Entire Company on the Same Page
         </h1>
         <p className="text-[#1F3D60] mt-6 leading-none font-normal md:text-[16px] text-[14px] md:w-[650px] w-[361px]">
