@@ -9,7 +9,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="p-1 md:p-10 flex justify-center  md:justify-between md:flex-row flex-col ">
+    <div className="p-1 md:p-10 flex justify-center mb-5 md:justify-between md:flex-row flex-col ">
       <div className="">
         <div className="bg-[#ECF4F8]  text-center px-4 w-52 py-0 text-[#274C78] font-[500] text-[14px]">
           WANT TO KNOW MORE

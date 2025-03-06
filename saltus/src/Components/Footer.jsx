@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="logo">
             <img src={logo} alt="" />
           </div>
-          <p className="font-[400] text-[16px] text-[#707070] w-[360px] md:w-[443px]">
+          <p className="font-[400] text-[14px] md:text-[16px] text-[#707070] w-[350px] md:w-[443px]">
             Improving organizational outcomes by aligning teams to a single goal
           </p>
         </div>
@@ -22,13 +22,13 @@ const Footer = () => {
             <h3 className="text-[#303850] font-[500] mb-4">INFO</h3>
             <ul>
               <li className="mb-4">
-                <Link className="text-[#707070]">Why choose us</Link>
+                <Link className="text-[#707070] text-[13px] md:text-[16px]">Why choose us</Link>
               </li>
               <li className="mb-4">
-                <Link className="text-[#707070]">How it works</Link>
+                <Link className="text-[#707070] text-[13px] md:text-[16px]">How it works</Link>
               </li>
               <li>
-                <Link className="text-[#707070]">FAQs</Link>
+                <Link className="text-[#707070] text-[13px] md:text-[16px]">FAQs</Link>
               </li>
             </ul>
           </div>
@@ -36,7 +36,7 @@ const Footer = () => {
             <h3 className="text-[#303850] font-[500] mb-4">Contact</h3>
             <div>
               <li className="list-none mb-4">
-                <Link className="text-[#707070]">Ceo@saltuscorp.com </Link>
+                <Link className="text-[#707070] text-[13px] md:text-[16px]">Ceo@saltuscorp.com </Link>
               </li>
             </div>
           </div>
