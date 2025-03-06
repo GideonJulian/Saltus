@@ -9,26 +9,26 @@ const Faq = () => {
   };
 
   return (
-    <div className="p-1 md:p-10 flex justify-normal md:justify-between md:flex-row flex-col ">
+    <div className="p-1 md:p-10 flex justify-center  md:justify-between md:flex-row flex-col ">
       <div className="">
-        <div className="bg-[#ECF4F8] text-center px-4 w-52 py-0 text-[#274C78] font-[500] text-[14px]">
-        WANT TO KNOW MORE
+        <div className="bg-[#ECF4F8]  text-center px-4 w-52 py-0 text-[#274C78] font-[500] text-[14px]">
+          WANT TO KNOW MORE
         </div>
-        <div className="text-center md:text-nowrap">
-          <h1 className="font-[500] text-center   text-[30px] md:text-[64px] font-sans text-[#1F3D60] mt-5 md:w-[530px] leading-none lmd:eading-tight">
+        <div className="">
+          <h1 className="font-[500] text-center md:text-left   text-[28px] md:text-[64px] font-sans text-[#1F3D60] mt-5 md:w-[530px] leading-none lmd:eading-tight">
             Frequently Asked Questions
           </h1>
-          <p className="text-[#414552] text-[16px] font-normal mt-5">
+          <p className="text-[#414552] text-[15px] md:text-[16px] font-normal mt-5">
             Couldn’t find what you were looking for? write to us at
             Ceo@saltuscorp.com
           </p>
         </div>
       </div>
-      <div className="md:m-0 m-auto">
+      <div className="md:m-0 m-auto px-2">
         {FaqData.map((item, index) => (
           <div
             key={index}
-            className="w-full max-w-[500px] bg-white rounded-lg shadow-md mt-5 px-6 py-4 transition-all duration-300"
+            className="w-full max-w-[500px] bg-white rounded-lg shadow-md mt-5 px-5 py-4 transition-all duration-300"
           >
             {/* Question Row */}
             <div

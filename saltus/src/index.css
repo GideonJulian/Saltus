@@ -10,6 +10,9 @@ html {
     font-family: "Inter", sans-serif;
     padding: 0;
 }
+body {
+    overflow-x: hidden; 
+}
 .logo h1 {
     font-family: 'Montserrat', sans-serif;
 }

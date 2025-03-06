@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bottom py-6 flex flex-col md:flex-row md:mb-8 mb-0 items-center px-7 justify-center md:justify-between  mx-auto">
+      <div className="bottom md:px-28  py-6 flex flex-col md:flex-row md:mb-8 mb-0 items-center px-7 justify-center md:justify-between  mx-auto">
         <div>
           <h3 className="text-[#303850] text-[15px] font-[400]">
             © 2025 — Copyright
