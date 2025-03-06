@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from '../assets/icons/SALTUS..png'
 const Header = ({onOpen}) => {
     
   return (
     <div className="w-full p-6 px-8 bg-white shadow-md fixed z-10 top-0 flex justify-between items-center">
       <div className="logo">
-        <h1 className="font-bold ">SALTUS.</h1>
+        {/* <h1 className="font-bold ">SALTUS.</h1> */}
+        <img src={logo} alt="" />
       </div>
       <ul className="md:flex items-center hidden gap-10">
         <div className="links hidden md:flex items-center gap-10 ">

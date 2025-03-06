@@ -33,14 +33,14 @@ const Home = () => {
       <div>
         <Faq />
       </div>
-      <div className="w-full bg-primary p-7 flex items-center flex-col justify-center mb-5 ">
-        <h1 className="text-[40px] font-600] text-ceneter text-white">
-          Get Started On Saltus Today!
-        </h1>
-        <button className="px-4 py-3 bg-white rounded-full text-sm font-[600] text-black mt-5">
-          Join our wailist
-        </button>
-      </div>
+        <div className="w-full bg-primary p-7 flex items-center flex-col h-[300px] justify-center mb-5 ">
+          <h1 className="md:text-[40px] text-[32px] font-600] text-center text-white">
+            Get Started On Saltus Today!
+          </h1>
+          <button className="px-4 py-3 bg-white rounded-full text-sm font-[600] text-black mt-5">
+            Join our wailist
+          </button>
+        </div>
       <div>
         {dropMenuState && (
           <DropMenu isOpen={dropMenuState} onClose={closeDropMenu} />
