@@ -4,7 +4,7 @@ import HeroImg from "./HeroImg";
 const Hero = () => {
   return (
     <div className="bg-[#f0eeee] min-h-[100vh] flex md:p-16 px-5 pt-20 md:flex-row flex-col w-full max-w-[100%] items-center justify-center">
-    <div className="md:mt-48 mt-5 text-center md:text-left">
+    <div className="md:mt-48 mt-5  md:text-left">
       <h1 className="font-[700] md:text-5xl text-[29px] text-[#1F3D60] md:w-[650px] max-w-[90%] leading-snug">
         Stop Operating in Silos, Keep Your Entire Company on the Same Page
       </h1>
