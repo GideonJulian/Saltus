@@ -20,18 +20,18 @@ const JoinForm = () => {
     setloading(true);
 
     try {
-        await addToWaitlist(form);
-        setMessage("✅ Successfully added to the waitlist!");
-        console.log("Successfully added to the waitlist!");
-        setForm({ fullname: "", organization: "", email: "" }); 
-        navigate('/successModal')
+      await addToWaitlist(form);
+      setMessage("✅ Successfully added to the waitlist!");
+      console.log("Successfully added to the waitlist!");
+      setForm({ fullname: "", organization: "", email: "" });
+      navigate("/successModal");
     } catch (error) {
-        setMessage("❌ Something went wrong, please try again");
-        alert(error.message);
+      setMessage("❌ Something went wrong, please try again");
+      alert(error.message);
     }
 
     setloading(false);
-};
+  };
 
   return (
     <div className="bg-[#F8FAFB] h-screen  flex items-center justify-center w-full md:p-2 p-3">
@@ -64,60 +64,59 @@ const JoinForm = () => {
           </p>
         </div>
         <form onSubmit={handleSubmit}>
-  <div className="mt-5">
-    <label className="mb-3 font-[500] text-[14px]">Fullname</label>
-    <input
-      type="text"
-      placeholder="Enter your fullname"
-      name="fullname"
-      value={form.fullname}
-      onChange={(e) => setForm({ ...form, fullname: e.target.value })}
-      className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] placeholder:font-[400px] border border-input"
-    />
-  </div>
-  <div className="mt-5">
-    <label className="mb-3 font-[500] text-[14px]">Organization</label>
-    <input
-      type="text"
-      name="organization"
-      value={form.organization}
-      onChange={(e) =>
-        setForm({ ...form, organization: e.target.value })
-      }
-      placeholder="Enter your organization name"
-      className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] placeholder:font-[400px] border border-input"
-    />
-  </div>
-  <div className="mt-5">
-    <label className="mb-3 font-[500] text-[14px]">Email Address</label>
-    <input
-      type="text"
-      name="email"
-      value={form.email}
-      onChange={(e) => setForm({ ...form, email: e.target.value })}
-      placeholder="Enter your email address"
-      className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] placeholder:font-[400px] border border-input"
-    />
-  </div>
-  <div className="mt-5">
-    <button
-      style={{
-        backgroundColor: !allFilled ? "#3C425714" : "#274C78",
-        cursor: !allFilled ? "not-allowed" : "pointer",
-        color: !allFilled ? "#A0A0A0" : "#FFF",
-        padding: "10px",
-        border: "none",
-        borderRadius: "5px",
-      }}
-      type="submit"
-      disabled={!allFilled || loading}
-      className="text-center w-full px-4 py-5 rounded-md text-white font-[600px] text-[16px] shadow-sm shadow-[#3C425714]"
-    >
-      {loading ? "Processing..." : "Join Waitlist"}
-    </button>
-  </div>
-</form>
-
+          <div className="mt-5">
+            <label className="mb-3 font-[500] text-[14px]">Fullname</label>
+            <input
+              type="text"
+              placeholder="Enter your fullname"
+              name="fullname"
+              value={form.fullname}
+              onChange={(e) => setForm({ ...form, fullname: e.target.value })}
+              className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] placeholder:font-[400px] border border-input"
+            />
+          </div>
+          <div className="mt-5">
+            <label className="mb-3 font-[500] text-[14px]">Organization</label>
+            <input
+              type="text"
+              name="organization"
+              value={form.organization}
+              onChange={(e) =>
+                setForm({ ...form, organization: e.target.value })
+              }
+              placeholder="Enter your organization name"
+              className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] placeholder:font-[400px] border border-input"
+            />
+          </div>
+          <div className="mt-5">
+            <label className="mb-3 font-[500] text-[14px]">Email Address</label>
+            <input
+              type="text"
+              name="email"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              placeholder="Enter your email address"
+              className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] placeholder:font-[400px] border border-input"
+            />
+          </div>
+          <div className="mt-5">
+            <button
+              style={{
+                backgroundColor: !allFilled ? "#3C425714" : "#274C78",
+                cursor: !allFilled ? "not-allowed" : "pointer",
+                color: !allFilled ? "#A0A0A0" : "#FFF",
+                padding: "10px",
+                border: "none",
+                borderRadius: "5px",
+              }}
+              type="submit"
+              disabled={!allFilled || loading}
+              className="text-center w-full px-4 py-5 rounded-md text-white font-[600px] text-[16px] shadow-sm shadow-[#3C425714]"
+            >
+              {loading ? "Processing..." : "Join Waitlist"}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
