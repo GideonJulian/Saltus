@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Layouts from "./Layouts/Layouts";
-import JoinForm from "./pages/JOinForm";
+import JoinForm from "./pages/Join";
 import SuccessModal from "./pages/SuccessModal";
 
 const App = () => {
