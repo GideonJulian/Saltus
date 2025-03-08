@@ -36,7 +36,8 @@ const Footer = () => {
             <h3 className="text-[#303850] font-[500] mb-4">Contact</h3>
             <div>
               <li className="list-none mb-4">
-                <Link className="text-[#707070] text-[13px] md:text-[16px]">Ceo@saltuscorp.com </Link>
+                    <Link className="text-[#4A6A90]  text-[13px] md:text-[16px]" to={'Ceo@saltuscorp.com<'}> Ceo@saltuscorp.com</Link>
+              
               </li>
             </div>
           </div>

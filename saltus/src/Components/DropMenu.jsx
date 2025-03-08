@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/icons/SALTUS..png'
+import { useNavigate } from "react-router-dom";
 const DropMenu = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
   return (
     <div
       className={`fixed inset-0 z-10 w-full h-[100dvh] bg-white shadow-lg transition-transform duration-300 ease-in-out ${
@@ -37,7 +39,7 @@ const DropMenu = ({ isOpen, onClose }) => {
 
       {/* Button at the Bottom */}
       <div className="absolute inset-x-0 bottom-6 px-6">
-        <button className="w-full py-3 bg-primary text-white font-semibold text-lg rounded-full shadow-md hover:bg-primary-dark transition-all">
+        <button  onClick={()=> navigate('/join')} className="w-full py-3 bg-primary text-white font-[600] text-[14px] rounded-full shadow-md hover:bg-primary-dark transition-all">
           Join Our Waitlist
         </button>
       </div>

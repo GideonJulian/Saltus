@@ -6,6 +6,7 @@ import WhyUs from "../Components/WhyUs";
 
 import HowItWorks from "../Components/HowItWorks";
 import Faq from "../Components/Faq";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [dropMenuState, setDropMenuSTate] = useState(false);
   const handleOpenDropMenu = () => {
@@ -14,6 +15,7 @@ const Home = () => {
   const closeDropMenu = () => {
     setDropMenuSTate(false);
   };
+  const navigate = useNavigate();
   return (
     <div className="text-primary font-bold text-2xl">
       <div>
@@ -37,8 +39,8 @@ const Home = () => {
           <h1 className="md:text-[40px] text-[32px] font-600] text-center text-white">
             Get Started On Saltus Today!
           </h1>
-          <button className="px-4 py-3 bg-white rounded-full text-sm font-[600] text-black mt-5">
-            Join our wailist
+          <button onClick={()=> navigate('/join')} className="px-4 py-3 bg-white rounded-full text-sm font-[600] text-black mt-5">
+            Join our waitlist
           </button>
         </div>
       <div>

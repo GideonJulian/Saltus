@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/icons/SALTUS..png'
+import { useNavigate } from "react-router-dom";
 const Header = ({onOpen}) => {
-    
+  const navigate = useNavigate();
   return (
     <div className="w-full p-6 px-8 bg-white shadow-md fixed z-10 top-0 flex justify-between items-center">
       <div className="logo">
@@ -27,7 +28,7 @@ const Header = ({onOpen}) => {
             </Link>
           </li>
         </div>
-        <button className="px-4 py-3 bg-primary rounded-full text-sm font-[600] text-white">
+        <button onClick={()=> navigate('/join ')} className="px-4 py-3 bg-primary rounded-full text-sm font-[600] text-white">
           Join our wailist
         </button>
       </ul>

@@ -11,7 +11,7 @@ const FaqData = [
   {
     title: "Who are the target users of the platform?  ",
     answer:
-      "SSaltus is designed for companies of all sizes with multiple teams.  ",
+      "Saltus is designed for companies of all sizes with multiple teams.  ",
   },
   {
     title: "What is the role of the Super Administrator?   ",

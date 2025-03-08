@@ -1,6 +1,7 @@
 import React from "react";
 import FaqData from "../utils/FaqData";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Faq = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -20,7 +21,7 @@ const Faq = () => {
           </h1>
           <p className="text-[#414552] text-[15px] md:text-[16px] font-normal mt-5">
             Couldn’t find what you were looking for? write to us at
-            Ceo@saltuscorp.com
+           <Link className="text-[#4A6A90]" to={'Ceo@saltuscorp.com<'}> Ceo@saltuscorp.com</Link>
           </p>
         </div>
       </div>
