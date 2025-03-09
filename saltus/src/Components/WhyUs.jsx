@@ -15,7 +15,7 @@ const WhyUs = () => {
           <h1 className="text-center text-[#0b0c0c] text-[25px] font-[700] mb-4">
             Align Your Team, Amplify Your Impact
           </h1>
-          <p className="text-[#7F8695] text-[15px] leading-none md:text-[17px] text-center font-[400]">
+          <p className="text-[#7F8695] text-[15px] leading-snug md:text-[17px] text-center font-[400]">
             Capture tasks across your organization, assess their alignment with
             company goals, share weekly 200 word progress stories to your teams.
             Deliver key reports to management and investors.

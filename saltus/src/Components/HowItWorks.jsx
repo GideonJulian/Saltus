@@ -27,10 +27,10 @@ const HowItWorks = () => {
       </div>
 
       <div className="mt-5">
-        <h1 className="text-center text-[#274C78] text-[30px] font-[700]">
+        <h1 className="text-center text-[#274C78] text-[30px] font-[700] ">
           Simple Steps to Improve Team Alignment
         </h1>
-        <p className="text-[#7F8695] text-[15px] leading-none md:text-[17px] text-center font-[400] mt-5">
+        <p className="text-[#7F8695] text-[15px] leading-relaxed md:text-[17px] text-center font-[400] mt-5">
           Sign up, set your goals, and watch your team’s work transform
         </p>
       </div>
