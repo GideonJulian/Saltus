@@ -11,12 +11,14 @@ const HowItWorks = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, threshold: 1 });
   return (
+    
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
       animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
       transition={{ duration: 0.9, ease: "easeOut" }}
-      className="w-full bg-[#F9F9F9] p-6 mb-10"
+      className="w-full bg-[#F9F9F9] p-6  mb-10 "
+      id="how-it-works"
     >
       <div className="flex items-center justify-center">
         <div className="bg-[#ECF4F8] text-center px-4 w-40 py-1 text-[#274C78] font-[500] text-[14px]">

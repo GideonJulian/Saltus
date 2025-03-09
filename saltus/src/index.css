@@ -9,6 +9,8 @@ html {
     margin: 0;
     font-family: "Inter", sans-serif;
     padding: 0;
+    scroll-behavior: smooth;
+
 }
 body {
     overflow-x: hidden; 

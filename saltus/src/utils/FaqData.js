@@ -2,7 +2,7 @@ const FaqData = [
   {
     title: "What is the purpose of Saltus? ",
     answer:
-      "Saltus helps companies create internal alignment within their organizations. With Saltus, companies can collate tasks across multiple units, measure their alignment with corporate objectives, and create short 200 word stories for all staff detailing how their work contributes to corporate objectives and their companies mission.  ",
+      "Saltus helps companies create internal alignment within their organizations. With Saltus, companies can collate tasks across multiple units, measure their alignment with corporate objectives, and create short 200 word stories for all staff detailing how their work contributes to corporate objectives and their company's mission.  ",
     answer2:
       "Saltus also helps leadership teams improve visibility across their organizations by creating specialized reports for management and other key stakeholders. ",
     answer3:

@@ -54,13 +54,12 @@ const JoinForm = () => {
         </div>
         <div>
           <h1 className="font-[800] text-[22px] md:text-[32px] text-[#1F3D60] w-[320px] md:w-[500px]">
-            Join our Journey and get early access
+          Join the Future of Work 
           </h1>
         </div>
         <div>
           <p className="text-[#7F8695] font[400] text-[14px] md:text-[15px] w-[332px] md:w-[490px]">
-            Join our extensive waitlist today to spark connection and get
-            notified when we launch 🎉
+            Join our waitlist to get early access and exclusive insights before we launch!
           </p>
         </div>
         <form onSubmit={handleSubmit}>
@@ -89,7 +88,7 @@ const JoinForm = () => {
             />
           </div>
           <div className="mt-5">
-            <label className="mb-3 font-[500] text-[14px]">Email Address</label>
+            <label className="mb-3 font-[500] text-[14px]">Work Email</label>
             <input
               type="text"
               name="email"

@@ -14,13 +14,13 @@ const SuccessModal = () => {
           <img src={icon} className="w-[60px]" alt="" />
           <div>
             <h1 className="font-[800] text-[35px] text-[#1F3D60] ">
-              Thanks for Joining!
+              You're in
             </h1>
           </div>
           <div>
             <p className="text-center font-[400] text-[16px] text-[#7F8695] w-[280px] md:w-[460px]">
-              You are the most amazing person! Thank you joining the
-              Waitlist.You will receive an email from us on our launch day.
+             Thanks for joining, we're excited to have you on board. Keep an eye on your inbox for early access invitations and special offers. 
+              
             </p>
           </div>
             <button onClick={()=> navigate('/')} className="text-center w-full px-4 py-3 rounded-md bg-[#274C78] text-white font-[600px] text-[16px] shadow-sm shadow-[#3C425714]">

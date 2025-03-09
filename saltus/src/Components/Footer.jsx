@@ -7,10 +7,10 @@ import instagram from "../assets/icons/instagram.png";
 import telegram from "../assets/icons/telegram.png";
 const Footer = () => {
   return (
-    <div className="w-full p-3 bg-white">
+    <div className="w-full p-3 bg-white" id="contact-us">	
       <div className="container flex flex-col md:flex-row md:mb-8 mb-0 px-4 md:px-7 py-10 justify-between  mx-auto">
         <div>
-          <div className="logo">
+          <div className="logo mb-3 ">
             <img src={logo} alt="" />
           </div>
           <p className="font-[400] text-[14px] md:text-[16px] text-[#707070] w-[350px] md:w-[443px]">
@@ -36,7 +36,7 @@ const Footer = () => {
             <h3 className="text-[#303850] font-[500] mb-4">Contact</h3>
             <div>
               <li className="list-none mb-4">
-                    <Link className="text-[#4A6A90]  text-[13px] md:text-[16px]" to={'Ceo@saltuscorp.com<'}> Ceo@saltuscorp.com</Link>
+                    <Link className="text-[#4A6A90]  text-[13px] md:text-[16px]" to={'Ceo@saltuscorp.com<'}> Info@saltusco.com</Link>
               
               </li>
             </div>
