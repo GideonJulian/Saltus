@@ -15,6 +15,10 @@ html {
 body {
     overflow-x: hidden; 
 }
+@font-face {
+    font-family: 'nura', sans-serif;
+    src: url(/saltus//src/assets/fonts/._Nura-Bold.otf);
+}
 .logo h1 {
     font-family: 'Montserrat', sans-serif;
 }

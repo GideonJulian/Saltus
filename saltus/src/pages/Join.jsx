@@ -8,6 +8,7 @@ const JoinForm = () => {
     organization: "",
     email: "",
     fullname: "",
+    question:''
   });
   const allFilled = form.organization && form.email && form.fullname;
   const navigate = useNavigate();
@@ -38,7 +39,8 @@ const JoinForm = () => {
       <div className="bg-white rounded-lg shadow-lg shadow-[#0C0C0D0D] w-full md:w-3/6 px-4 py-7  md:px-7 md:py-7 ">
         <div>
           <div className="logo mb-3">
-            <img src={logo} alt="" />
+          <h1 className="text-primary text-[24px] ">SALTUS.</h1>
+            {/* <img src={logo} alt="" /> */}
           </div>
         </div>
         <div>
@@ -95,6 +97,17 @@ const JoinForm = () => {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder="Enter your email address"
+              className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] placeholder:font-[400px] border border-input"
+            />
+          </div>
+          <div className="mt-5">
+            <label className="mb-3 font-[500] text-[14px]">What is your biggest challenge that this can help solve? <span className="text-gray-300">(Optional)</span></label>
+            <input
+              type="text"
+              name="email"
+              value={form.question}
+              onChange={(e) => setForm({ ...form, question: e.target.value })}
+              placeholder="Please drop am answer "
               className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] placeholder:font-[400px] border border-input"
             />
           </div>
