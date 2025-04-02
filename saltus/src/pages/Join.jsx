@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const JoinForm = () => {
-  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState(
+    "0x4AAAAAABCS788VqsK0CGfl"
+  );
   const [form, setForm] = useState({
     organization: "",
     email: "",
@@ -15,17 +17,19 @@ const JoinForm = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  window.onTurnstileSuccess = (token) => {
-    setTurnstileToken(token);
-    document.getElementById("submitBtn").disabled = false;
-  };
+  useEffect(() => {
+    window.onTurnstileSuccess = (token) => {
+      console.log("Turnstile token:", token);
+      setTurnstileToken(token);
+      document.getElementById("submitBtn").disabled = false;
+    };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setMessage("");
 
-    const payload = { ...form, turnstileToken };
+    const payload = { ...form, token: turnstileToken };
 
     try {
       const response = await fetch(
@@ -37,23 +41,17 @@ const JoinForm = () => {
         }
       );
 
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.info || "Failed to submit form");
+      if (response.ok) {
+        alert("Successfully joined the waitlist!");
+        navigate("/success");
+        setForm({ fullname: "", organization: "", email: "", question: "" });
+        setTurnstileToken("");
+      } else {
+        alert("Error submitting form. Please try again.");
       }
-
-      navigate("/success");
-      setForm({
-        fullname: "",
-        organization: "",
-        email: "",
-        question: "",
-      }); // Reset form
-      setTurnstileToken(""); // Reset turnstile token
     } catch (error) {
       console.error("Error:", error);
-      alert(error.message || "Something went wrong. Please try again.");
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -129,7 +127,7 @@ const JoinForm = () => {
               className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] border border-input"
             />
           </div>
-          <div className="flex ">
+          <div className="flex">
             <div
               className="cf-turnstile"
               data-sitekey="0x4AAAAAABCS788VqsK0CGfl"
@@ -154,7 +152,6 @@ const JoinForm = () => {
               {loading ? "Processing..." : "Join Waitlist"}
             </button>
           </div>
-          
         </form>
       </div>
     </div>
