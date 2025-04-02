@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/icons/SALTUS..png"; 
 
 const JoinForm = () => {
+  const [turnstileToken, setTurnstileToken] = useState("");
   const [form, setForm] = useState({
     organization: "",
     email: "",
@@ -15,36 +15,48 @@ const JoinForm = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
+  window.onTurnstileSuccess = (token) => {
+    setTurnstileToken(token);
+    document.getElementById("submitBtn").disabled = false;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage("");
     setLoading(true);
+    setMessage("");
+
+    const payload = { ...form, turnstileToken };
 
     try {
-      const response = await fetch("http://localhost:5000/join-waitlist", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+      const response = await fetch(
+        "https://waitlist-one-liard.vercel.app/join-waitlist",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
 
-      const data = await response.json();
+      const result = await response.json();
 
-      if (response.ok) {
-        setMessage("✅ Successfully added to the waitlist!");
-        console.log("Successfully added to the waitlist!");
-        setForm({ fullname: "", organization: "", email: "", question: "" });
-        navigate("/successModal");
-      } else {
-        throw new Error(data.error || "Something went wrong");
+      if (!response.ok) {
+        throw new Error(result.info || "Failed to submit form");
       }
-    } catch (error) {
-      setMessage("❌ Something went wrong, please try again");
-      console.error(error);
-    }
 
-    setLoading(false);
+      navigate("/success");
+      setForm({
+        fullname: "",
+        organization: "",
+        email: "",
+        question: "",
+      }); // Reset form
+      setTurnstileToken(""); // Reset turnstile token
+    } catch (error) {
+      console.error("Error:", error);
+      alert(error.message || "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -52,9 +64,11 @@ const JoinForm = () => {
       <div className="bg-white rounded-lg shadow-lg shadow-[#0C0C0D0D] w-full md:w-3/6 px-4 py-7 md:px-7 md:py-7">
         <div className="logo mb-3">
           <h1 className="text-primary text-[24px]">SALTUS.</h1>
-          {/* <img src={logo} alt="Logo" /> */}
         </div>
-        <button className="mt-5 flex items-center gap-2" onClick={() => navigate("/")}>
+        <button
+          className="mt-5 flex items-center gap-2"
+          onClick={() => navigate("/")}
+        >
           <i className="bi bi-arrow-left"></i>
           <h1 className="text-[#7F8695] text-[13px]">BACK TO HOMEPAGE</h1>
         </button>
@@ -62,7 +76,8 @@ const JoinForm = () => {
           Join the Future of Work
         </h1>
         <p className="text-[#7F8695] font[400] text-[14px] md:text-[15px] w-[332px] md:w-[490px]">
-          Join our waitlist to get early access and exclusive insights before we launch!
+          Join our waitlist to get early access and exclusive insights before we
+          launch!
         </p>
         <form onSubmit={handleSubmit}>
           <div className="mt-5">
@@ -82,7 +97,9 @@ const JoinForm = () => {
               type="text"
               name="organization"
               value={form.organization}
-              onChange={(e) => setForm({ ...form, organization: e.target.value })}
+              onChange={(e) =>
+                setForm({ ...form, organization: e.target.value })
+              }
               placeholder="Enter your organization name"
               className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] border border-input"
             />
@@ -112,8 +129,16 @@ const JoinForm = () => {
               className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] border border-input"
             />
           </div>
+          <div className="flex ">
+            <div
+              className="cf-turnstile"
+              data-sitekey="0x4AAAAAABCS788VqsK0CGfl"
+              data-callback="onTurnstileSuccess"
+            ></div>
+          </div>
           <div className="mt-5">
             <button
+              id="submitBtn"
               style={{
                 backgroundColor: !allFilled ? "#3C425714" : "#274C78",
                 cursor: !allFilled ? "not-allowed" : "pointer",
@@ -129,6 +154,7 @@ const JoinForm = () => {
               {loading ? "Processing..." : "Join Waitlist"}
             </button>
           </div>
+          
         </form>
       </div>
     </div>
