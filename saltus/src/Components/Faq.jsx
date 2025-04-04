@@ -10,7 +10,7 @@ const Faq = () => {
   };
 
   return (
-    <div id="faq" className="p-1 md:p-10  flex justify-center mb-5 md:justify-between md:flex-row flex-col ">
+    <div id="faq" className="p-1 md:p-10  flex justify-center mb-5 gap-48 md:flex-row flex-col ">
       <div className="">
         <div className="bg-[#ECF4F8]  text-center px-4 w-52 py-0 text-[#274C78] font-[500] text-[14px]">
           WANT TO KNOW MORE
@@ -29,7 +29,7 @@ const Faq = () => {
         {FaqData.map((item, index) => (
           <div
             key={index}
-            className="w-full max-w-[500px] bg-white rounded-lg shadow-md mt-5 px-5 py-4 transition-all duration-300"
+            className="w-full max-w-[500px] bg-white rounded-lg shadow-[#332B030D] shadow-md mt-5 px-5 py-4 transition-all duration-300"
           >
             {/* Question Row */}
             <div

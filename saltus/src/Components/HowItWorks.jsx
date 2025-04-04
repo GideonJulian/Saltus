@@ -11,7 +11,6 @@ const HowItWorks = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, threshold: 1 });
   return (
-    
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -20,7 +19,7 @@ const HowItWorks = () => {
       className="w-full bg-[#F9F9F9] p-6  mb-10 "
       id="how-it-works"
     >
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center pt-10">
         <div className="bg-[#ECF4F8] text-center px-4 w-40 py-1 text-[#274C78] font-[500] text-[14px]">
           HOW IT WORKS
         </div>
@@ -35,50 +34,52 @@ const HowItWorks = () => {
         </p>
       </div>
 
-      <div className="flex md:flex-row flex-col items-center justify-center gap-7 mt-10">
-        {[
-          {
-            img: Number1,
-            title: "Sign Up",
-            text: "Sign up as a Super Administrator and then invite your team.",
-          },
-          {
-            img: Number2,
-            title: "Set company goals",
-            text: "Set mission, vision, objectives and key goals of your company.",
-          },
-          {
-            img: Number3,
-            title: "Share task",
-            text: "Teams share weekly/monthly updates on work done.",
-          },
-          {
-            img: Number4,
-            title: "Aligned Impact",
-            text: "A 200-word story connecting work to company’s mission.",
-          },
-          {
-            img: Number5,
-            title: "Generate Reports",
-            text: "Create detailed reports for leaders and investors in minutes.",
-          },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.9, delay: index * 0.2 }}
-            className="flex flex-col items-center"
-          >
-            <img src={item.img} alt="" className="w-[65px]" />
-            <h3 className="mt-5 font-[600] text-[20px] text-[#172E48]">
-              {item.title}
-            </h3>
-            <p className="mt-3 text-center text-[15px] text-[#414552] font-normal w-[270px]">
-              {item.text}
-            </p>
-          </motion.div>
-        ))}
+      <div className="w-full flex justify-center p-7 pt-16">
+        <div className="max-w-[900px] flex md:flex-row flex-col items-center justify-center gap-5  mt-10">
+          {[
+            {
+              img: Number1,
+              title: "Sign Up",
+              text: "Sign up as a Super Administrator and then invite your team.",
+            },
+            {
+              img: Number2,
+              title: "Set company goals",
+              text: "Set mission, vision, objectives and key goals of your company.",
+            },
+            {
+              img: Number3,
+              title: "Share task",
+              text: "Teams share weekly/monthly updates on work done.",
+            },
+            {
+              img: Number4,
+              title: "Aligned Impact",
+              text: "A 200-word story connecting work to company’s mission.",
+            },
+            {
+              img: Number5,
+              title: "Generate Reports",
+              text: "Create detailed reports for leaders and investors in minutes.",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.9, delay: index * 0.2 }}
+              className="flex flex-col items-center"
+            >
+              <img src={item.img} alt="" className="w-[55px]" />
+              <h3 className="mt-5 font-[600] text-[20px] text-[#172E48]">
+                {item.title}
+              </h3>
+              <p className="mt-3 text-center text-[14px] text-[#414552] font-normal w-[260px]">
+                {item.text}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
