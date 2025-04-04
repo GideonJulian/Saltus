@@ -4,7 +4,7 @@ import FeatureGrid from "./FeatureGrid";
 const WhyUs = () => {
   return (
     <section id="why-choose-us" className="w-full grid place-items-center md:p-6 mb-20 mt-28">
-      <div className="bg-[#F8FAFB] md:p-7 rounded-2xl w-[100%] md:w-[90%]">
+      <div className="bg-[#F8FAFB] md:p-7 rounded-3xl w-[100%] md:w-[90%]">
         <div className="flex items-center justify-center">
           <div className="bg-[#ECF4F8] px-4 w-40 py-1 text-[#274C78] font-[500] text-[14px]">
             WHY CHOOSE US

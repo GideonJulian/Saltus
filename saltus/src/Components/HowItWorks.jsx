@@ -34,7 +34,7 @@ const HowItWorks = () => {
         </p>
       </div>
 
-      <div className="w-full flex justify-center p-7 pt-16">
+      <div className="w-full relative flex justify-center p-7 pt-16">
         <div className="max-w-[900px] flex md:flex-row flex-col items-center justify-center gap-5  mt-10">
           {[
             {
@@ -68,7 +68,7 @@ const HowItWorks = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.9, delay: index * 0.2 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center relative z-10"
             >
               <img src={item.img} alt="" className="w-[55px]" />
               <h3 className="mt-5 font-[600] text-[20px] text-[#172E48]">
@@ -80,6 +80,8 @@ const HowItWorks = () => {
             </motion.div>
           ))}
         </div>
+           <div className="hidden absolute md:block w-[80%] top-32  border-dashed border-t-2 border-gray-300 mx-3"></div>
+          
       </div>
     </motion.div>
   );
