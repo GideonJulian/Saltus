@@ -1,29 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Turnstile from "react-turnstile"; // Import Cloudflare Turnstile component
 
 const JoinForm = () => {
-  const [turnstileToken, setTurnstileToken] = useState(
-    "0x4AAAAAABCS788VqsK0CGfl"
-  );
   const [form, setForm] = useState({
     organization: "",
     email: "",
     fullname: "",
     question: "",
   });
-
-  const allFilled = form.organization && form.email && form.fullname;
-  const navigate = useNavigate();
-  const [message, setMessage] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    window.onTurnstileSuccess = (token) => {
-      console.log("Turnstile token:", token);
-      setTurnstileToken(token);
-      document.getElementById("submitBtn").disabled = false;
-    };
-  }, []);
+  const allFilled = form.organization && form.email && form.fullname && turnstileToken;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,16 +32,17 @@ const JoinForm = () => {
       );
 
       if (response.ok) {
-        alert("Successfully joined the waitlist!");
-        navigate("/success");
+        navigate("/successModal");
         setForm({ fullname: "", organization: "", email: "", question: "" });
         setTurnstileToken("");
       } else {
         alert("Error submitting form. Please try again.");
+        window.location.reload();
       }
     } catch (error) {
       console.error("Error:", error);
       alert("Something went wrong. Please try again.");
+      window.location.reload();
     } finally {
       setLoading(false);
     }
@@ -60,13 +51,8 @@ const JoinForm = () => {
   return (
     <div className="bg-[#F8FAFB] h-screen flex items-center justify-center w-full md:p-2 p-3">
       <div className="bg-white rounded-lg shadow-lg shadow-[#0C0C0D0D] w-full md:w-3/6 px-4 py-7 md:px-7 md:py-7">
-        <div className="logo mb-3">
-          <h1 className="text-primary text-[24px]">SALTUS.</h1>
-        </div>
-        <button
-          className="mt-5 flex items-center gap-2"
-          onClick={() => navigate("/")}
-        >
+        <h1 className="text-primary text-[24px] mb-3">SALTUS.</h1>
+        <button className="mt-5 flex items-center gap-2" onClick={() => navigate("/")}> 
           <i className="bi bi-arrow-left"></i>
           <h1 className="text-[#7F8695] text-[13px]">BACK TO HOMEPAGE</h1>
         </button>
@@ -74,19 +60,18 @@ const JoinForm = () => {
           Join the Future of Work
         </h1>
         <p className="text-[#7F8695] font[400] text-[14px] md:text-[15px] w-[332px] md:w-[490px]">
-          Join our waitlist to get early access and exclusive insights before we
-          launch!
+          Join our waitlist to get early access and exclusive insights before we launch!
         </p>
         <form onSubmit={handleSubmit}>
           <div className="mt-5">
-            <label className="mb-3 font-[500] text-[14px]">Fullname</label>
+            <label className="mb-3 font-[500] text-[14px]">Full Name</label>
             <input
               type="text"
-              placeholder="Enter your fullname"
+              placeholder="Enter your full name"
               name="fullname"
               value={form.fullname}
               onChange={(e) => setForm({ ...form, fullname: e.target.value })}
-              className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] border border-input"
+              className="w-full px-4 py-3 rounded-lg border border-input"
             />
           </div>
           <div className="mt-5">
@@ -95,11 +80,9 @@ const JoinForm = () => {
               type="text"
               name="organization"
               value={form.organization}
-              onChange={(e) =>
-                setForm({ ...form, organization: e.target.value })
-              }
+              onChange={(e) => setForm({ ...form, organization: e.target.value })}
               placeholder="Enter your organization name"
-              className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] border border-input"
+              className="w-full px-4 py-3 rounded-lg border border-input"
             />
           </div>
           <div className="mt-5">
@@ -110,13 +93,12 @@ const JoinForm = () => {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder="Enter your email address"
-              className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] border border-input"
+              className="w-full px-4 py-3 rounded-lg border border-input"
             />
           </div>
           <div className="mt-5">
             <label className="mb-3 font-[500] text-[14px]">
-              What is your biggest challenge that this can help solve?{" "}
-              <span className="text-gray-300">(Optional)</span>
+              What is your biggest challenge that this can help solve? (Optional)
             </label>
             <input
               type="text"
@@ -124,17 +106,19 @@ const JoinForm = () => {
               value={form.question}
               onChange={(e) => setForm({ ...form, question: e.target.value })}
               placeholder="Please drop an answer"
-              className="w-full px-4 py-3 rounded-lg placeholder:text-[#D8DEE8] border border-input"
+              className="w-full px-4 py-3 rounded-lg border border-input"
             />
           </div>
-          <div className="flex">
-            <div
-              className="cf-turnstile"
-              data-sitekey="0x4AAAAAABCS788VqsK0CGfl"
-              data-callback="onTurnstileSuccess"
-            ></div>
+
+          {/* Change 2 */}
+          <div className="mt-5">
+            <Turnstile
+              sitekey="0x4AAAAAABCS788VqsK0CGfl"
+              onVerify={(token) => setTurnstileToken(token)}
+            />
           </div>
           <div className="mt-5">
+          {/* end of change 2 */}
             <button
               id="submitBtn"
               style={{
@@ -147,7 +131,7 @@ const JoinForm = () => {
               }}
               type="submit"
               disabled={!allFilled || loading}
-              className="text-center w-full px-4 py-5 rounded-md text-white font-[600px] text-[16px] shadow-sm shadow-[#3C425714]"
+              className="text-center w-full px-4 py-5 rounded-md text-white font-[600px] text-[16px] shadow-sm"
             >
               {loading ? "Processing..." : "Join Waitlist"}
             </button>
