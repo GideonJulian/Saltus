@@ -10,16 +10,16 @@ const Faq = () => {
   };
 
   return (
-    <div id="faq" className="p-1 md:p-10  flex justify-center mb-5 gap-48 md:flex-row flex-col ">
+    <div id="faq" className="p-1 md:p-10  flex justify-center mb-5 md:gap-48 md:flex-row flex-col ">
       <div className="">
         <div className="bg-[#ECF4F8]  text-center px-4 w-52 py-0 text-[#274C78] font-[500] text-[14px]">
           WANT TO KNOW MORE
         </div>
         <div className="">
-          <h1 className="font-[500] text-center md:text-left   text-[28px] md:text-[64px] font-sans text-[#1F3D60] mt-5 md:w-[530px] leading-none lmd:eading-tight">
+          <h1 className="font-[500] text-center md:text-left   text-[32px] md:text-[64px] font-sans text-[#1F3D60] mt-5 md:w-[530px] leading-none lmd:eading-tight">
             Frequently Asked Questions
           </h1>
-          <p className="text-[#414552] text-[15px] md:text-[16px]  md:block font-normal mt-5">
+          <p className="text-[#414552] text-[15px] md:text-[16px] md:text-left text-center md:block font-normal mt-5">
             Couldn’t find what you were looking for? write to us at
            <Link className="text-[#4A6A90]" to={'Ceo@saltuscorp.com<'}>  hello@saltusco.com</Link>
           </p>
