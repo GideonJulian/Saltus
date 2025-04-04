@@ -14,7 +14,7 @@ const HeroImg = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      <img src={grp3} alt="" className="w-[197PX] max-w-[300px] md:w-[300px]" />
+      <img src={grp3} alt="" className="w-[220px] max-w-[300px] md:w-[300px]" />
     </motion.div>
   
     {/* Second Image */}
@@ -24,15 +24,15 @@ const HeroImg = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
     >
-      <img src={grp2} alt="" className="w-[185px] md:m-0 ml-32 max-w-[300px] md:w-[300px]" />
+      <img src={grp2} alt="" className="w-[190px] md:m-0 ml-32 max-w-[300px] md:w-[300px]" />
     </motion.div>
   
     {/* Third & Fourth Images */}
-    <div className="flex md:gap-20 gap-3 md:items-center flex-row mt-5">
+    <div className="flex md:gap-20 gap-3  md:flex-row flex-col mt-5">
       <motion.img
         src={grp1}
         alt=""
-        className="w-[190px] max-w-[300px] md:w-[290px]"
+        className="w-[210px] mr-10 max-w-[300px] md:w-[290px]"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
@@ -40,7 +40,7 @@ const HeroImg = () => {
       <motion.img
         src={grp4}
         alt=""
-        className="w-[180px] max-w-[250px] md:w-[290px] md:ml-0"
+        className="w-[200px] ml-10 max-w-[250px] md:w-[290px] md:ml-0"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}

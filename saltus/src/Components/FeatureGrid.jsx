@@ -26,7 +26,7 @@ const FeatureGrid = () => {
       ].map((feature, index) => (
         <motion.div
           key={index}
-          className="p-5 bg-white rounded-lg  w-[450px] h-auto"
+          className="p-5 bg-white rounded-lg  md:w-[450px] h-auto"
           initial="hidden"
           whileInView="visible"
           variants={itemVariants}
