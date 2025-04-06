@@ -35,7 +35,7 @@ const Home = () => {
       <div>
         <Faq />
       </div>
-        <div className="w-full bg-primary p-7 flex items-center flex-col h-[300px] justify-center mb-5 ">
+        <div className="w-full  p-7 pt-16 flex items-center flex-col h-[350px] justify-center mb-5 get-started ">
           <h1 className="md:text-[40px] text-[32px] font-600] text-center text-white">
             Get Started On Saltus Today!
           </h1>

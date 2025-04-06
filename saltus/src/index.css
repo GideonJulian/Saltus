@@ -22,3 +22,6 @@ body {
 .logo h1 {
     font-family: 'Montserrat', sans-serif;
 }
+.get-started {
+    background: url('/src/assets/images/getStarted.jpg') no-repeat center center/cover;	
+}
