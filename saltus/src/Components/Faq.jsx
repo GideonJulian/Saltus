@@ -21,7 +21,13 @@ const Faq = () => {
           </h1>
           <p className="text-[#414552] text-[15px] md:text-[16px] md:text-left text-center md:block font-normal mt-5">
             Couldn’t find what you were looking for? write to us at
-           <Link className="text-[#4A6A90]" to={'Ceo@saltuscorp.com<'}>  hello@saltusco.com</Link>
+            <a
+                  className="text-[#4A6A90]  text-[13px] md:text-[16px]"
+                  href="mailto:https://hello@saltusco.com"
+                >
+                  {" "}
+                  hello@saltusco.com
+                </a>
           </p>
         </div>
       </div>

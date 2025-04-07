@@ -44,7 +44,7 @@ const Footer = () => {
               <li className="list-none mb-4">
                 <a
                   className="text-[#4A6A90]  text-[13px] md:text-[16px]"
-                  href="https://hello@saltusco.com"
+                  href="mailto:https://hello@saltusco.com"
                 >
                   {" "}
                   hello@saltusco.com
