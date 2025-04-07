@@ -1,8 +1,8 @@
 import React from "react";
-import grp1 from "../assets/images/grp1.jpg";
-import grp2 from "../assets/images/grp2.jpg";
-import grp3 from "../assets/images/grp3.jpg";
-import grp4 from "../assets/images/grp4.jpg";
+import grp1 from "../assets/images/grp1.png";
+import grp2 from "../assets/images/grp2.png";
+import grp3 from "../assets/images/grp3.png";
+import grp4 from "../assets/images/grp4.png";
 import { motion } from "framer-motion";
 const HeroImg = () => {
   return (
