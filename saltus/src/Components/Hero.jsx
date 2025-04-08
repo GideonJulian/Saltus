@@ -23,7 +23,7 @@ const Hero = () => {
           Join Waitlist
         </button>
       </div>
-      <div className="flex md:justify-center md:ml-10 mt-10 md:mt-0">
+      <div className="flex md:justify-center md:ml-5 mt-10 md:mt-0">
         <HeroImg className="w-[90%] md:w-auto max-w-[400px]" />
       </div>
     </div>

@@ -32,7 +32,7 @@ const HeroImg = () => {
       <motion.img
         src={grp1}
         alt=""
-        className="w-[210px] mr-10 max-w-[300px] md:w-[290px]"
+        className="w-[270px] mr-10 max-w-[300px] md:w-[290px]"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
@@ -40,7 +40,7 @@ const HeroImg = () => {
       <motion.img
         src={grp4}
         alt=""
-        className="w-[200px] ml-10 max-w-[250px] md:w-[300px] md:ml-0"
+        className="w-[230px] ml-10 max-w-[320px] md:w-[500px] md:ml-0"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
