@@ -28,7 +28,7 @@ const HeroImg = () => {
     </motion.div>
   
     {/* Third & Fourth Images */}
-    <div className="flex md:gap-2  gap-3  md:flex-row flex-col mt-5">
+    <div className="flex md:gap-2  gap-1  md:flex-row flex-col mt-5">
       <motion.img
         src={grp1}
         alt=""
@@ -40,7 +40,7 @@ const HeroImg = () => {
       <motion.img
         src={grp4}
         alt=""
-        className="w-[250px] ml-10 max-w-[380px] md:w-[500px] md:ml-0"
+        className="w-[250px] ml-10 max-w-[400px] md:w-[500px] md:ml-0"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
