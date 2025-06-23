@@ -50,7 +50,7 @@ const Header = ({ onOpen }) => {
           onClick={() => navigate("/join")}
           className="px-4 py-3 bg-primary rounded-full text-sm font-[600] text-white"
         >
-          Join our wailist
+           Get in Touch
         </button>
       </ul>
       <div className="md:hidden block" onClick={onOpen}>

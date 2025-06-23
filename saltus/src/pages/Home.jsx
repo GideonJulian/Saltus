@@ -40,7 +40,7 @@ const Home = () => {
             Get Started On Saltus Today!
           </h1>
           <button onClick={()=> navigate('/join')} className="px-4 py-3 bg-white rounded-full text-sm font-[600] text-black mt-5">
-            Join our waitlist
+             Get in Touch
           </button>
         </div>
       <div>

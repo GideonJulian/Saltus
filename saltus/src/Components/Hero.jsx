@@ -20,7 +20,7 @@ const Hero = () => {
           onClick={() => navigate("/join")}
           className="px-10 md:px-12 py-2 mt-10 md:py-3 rounded-full shadow-lg bg-primary text-white font-medium text-[16px] whitespace-nowrap"
         >
-          Join Waitlist
+           Get in Touch
         </button>
       </div>
       <div className="flex md:justify-center md:ml-5 mt-10 md:mt-0">

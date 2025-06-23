@@ -40,7 +40,7 @@ const DropMenu = ({ isOpen, onClose }) => {
       {/* Button at the Bottom */}
       <div className="absolute inset-x-0 bottom-6 px-6">
         <button  onClick={()=> navigate('/join')} className="w-full py-3 bg-primary text-white font-[600] text-[14px] rounded-full shadow-md hover:bg-primary-dark transition-all">
-          Join Our Waitlist
+          Get in Touch
         </button>
       </div>
     </div>
