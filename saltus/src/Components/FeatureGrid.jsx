@@ -18,7 +18,7 @@ const FeatureGrid = () => {
   return (
     <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 place-items-center mt-10 gap-6">
 
-      {[
+      {[ 
         { img: fr4, title: "Track Performance in Real Time", text: "Give Team leaders the tools to monitor progress and drive accountability." },
         { img: fr3, title: "Turn Data into Insights", text: "Automatically generate clear, actionable stories from team data." },
         { img: fr1, title: "Flexible Work Task Delivery", text: "Share updates your way, whether it’s weekly, monthly, or quarterly." },

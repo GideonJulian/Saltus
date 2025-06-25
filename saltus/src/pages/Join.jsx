@@ -60,7 +60,7 @@ const JoinForm = () => {
           Join the Future of Work
         </h1>
         <p className="text-[#7F8695] font[400] text-[14px] md:text-[15px] w-[332px] md:w-[490px]">
-         Align your teams, boost visibility across the org, and keep everyone focused on what really matters
+         Align your teams, boost visibility across the organization, and keep everyone focused on what really matters.
         </p>
         <form onSubmit={handleSubmit}>
           <div className="mt-5">
